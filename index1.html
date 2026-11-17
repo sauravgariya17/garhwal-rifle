@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garhwal Rifles | Strength &amp; Unit Management</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. SIGN-IN / AUTHENTICATION SCREEN (WITH ARMY HERO IMAGE & MOTIVATION)
+       ======================================================================== -->
+  <section id="authScreen" class="auth-screen">
+    <!-- Left Panel: Garhwal Rifles Himalayan Army Hero & Motivational Lines -->
+    <div class="auth-left">
+      <div class="auth-left-top">
+        <div class="auth-brand-group">
+          <div class="gr-emblem" aria-label="Garhwal Rifles Emblem">GR</div>
+          <div>
+            <div style="font-size: 16px; font-weight: 700; letter-spacing: 0.14em; color: #fff;">THE GARHWAL RIFLES</div>
+            <div style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.16em; color: var(--gold-bright);">INDIAN ARMY &middot; INFANTRY REGIMENT</div>
+          </div>
+        </div>
+        <span class="war-cry-pill">&#9876; BADRI VISHAL LAL KI JAI</span>
+      </div>
+
+      <div class="auth-left-content">
+        <p class="auth-eyebrow">GARHWAL RIFLES &middot; UNIT &amp; PARADE MANAGEMENT</p>
+
+        <h1 class="auth-hero-title">
+          Service.<br />
+          Strength.<br />
+          <span class="gold-word">Precision.</span>
+        </h1>
+
+        <p class="auth-hero-subtitle">
+          A clear operational picture begins with accurate records. Born in the snow-clad peaks of Devbhoomi, forged in valour across every battlefield.
+        </p>
+
+        <!-- Motivational Lines Showcase Box -->
+        <div class="auth-motivation-card">
+          <div class="motivation-header">
+            <span class="motivation-tag">&#9733; REGIMENTAL MOTIVATION &amp; ETHOS</span>
+            <button type="button" id="nextLoginQuoteBtn" class="motivation-next-btn">Next Quote &rarr;</button>
+          </div>
+          <p id="loginQuoteText" class="motivation-quote-text">
+            &ldquo;Yudhaya Krit Nishchaya &mdash; Fight With Determination. A Garhwali soldier never retreats; he stands firm like the Himalayas.&rdquo;
+          </p>
+          <p id="loginQuoteSub" class="motivation-quote-sub">
+            Motto of The Garhwal Rifles &middot; Raised 5 May 1887
+          </p>
+        </div>
+
+        <!-- Regimental Gallantry & Heritage Badges -->
+        <div class="auth-honour-badges">
+          <span class="honour-chip">&#9733; DISCIPLINE &middot; DUTY &middot; HONOUR</span>
+          <span class="honour-chip">&#127942; 3 VICTORIA CROSS</span>
+          <span class="honour-chip">&#127942; 1 ASHOKA CHAKRA</span>
+          <span class="honour-chip">&#127942; 14 MAHA VIR CHAKRA</span>
+        </div>
+      </div>
+
+      <div class="auth-left-footer">
+        <span>GARHWAL &middot; UTTARAKHAND</span>
+        <span>REGIMENTAL CENTRE &middot; LANSDOWNE (EST. 1887)</span>
+      </div>
+    </div>
+
+    <!-- Right Panel: Login Form Card -->
+    <div class="auth-right">
+      <div class="auth-form-container">
+        <p class="auth-form-eyebrow">SECURE COMMAND ACCESS</p>
+        <h2 class="auth-form-title">Welcome back</h2>
+        <p class="auth-form-subtitle">Sign in to view your unit dashboard &amp; daily parade state.</p>
+
+        <form id="loginForm" class="auth-form" novalidate>
+          <div id="authErrorBox" class="auth-error" role="alert"></div>
+
+          <div class="form-group">
+            <label for="usernameInput" class="form-label">Username</label>
+            <div class="input-wrapper">
+              <input
+                type="text"
+                id="usernameInput"
+                class="form-input"
+                placeholder="Enter username"
+                value="admin"
+                autocomplete="username"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="passwordInput" class="form-label">Password</label>
+            <div class="input-wrapper">
+              <input
+                type="password"
+                id="passwordInput"
+                class="form-input"
+                placeholder="Enter password"
+                value="garhwal1887"
+                autocomplete="current-password"
+                required
+              />
+              <button type="button" id="togglePasswordBtn" class="password-toggle-btn">SHOW</button>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-signin">
+            <span>Sign in to Command Portal</span>
+            <span aria-hidden="true">&rarr;</span>
+          </button>
+        </form>
+
+        <!-- Quick Demo Role Switcher -->
+        <div class="auth-quick-roles">
+          <div class="auth-quick-label">
+            <span>Quick Demo Profiles</span>
+            <span>Click to select</span>
+          </div>
+          <div class="role-pills">
+            <button type="button" class="role-pill active" data-user="admin" data-role="Administrator" data-access="Admin access">
+              Administrator
+            </button>
+            <button type="button" class="role-pill" data-user="adjutant" data-role="Adjutant" data-access="Command access">
+              Adjutant
+            </button>
+            <button type="button" class="role-pill" data-user="clerk" data-role="Duty Clerk" data-access="View only">
+              Duty Clerk
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <p class="auth-right-creed">
+        &ldquo;The safety, honour and welfare of your country come first, always and every time.&rdquo;
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       2. MAIN APPLICATION SHELL (SIDEBAR + WORKSPACE)
+       ======================================================================== -->
+  <div id="appShell" class="app-shell hidden">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <div class="sidebar-brand">
+          <div class="gr-emblem sm">GR</div>
+          <div class="brand-text">
+            <span class="brand-title">GARHWAL RIFLES</span>
+            <span class="brand-subtitle">STRENGTH MANAGEMENT</span>
+          </div>
+        </div>
+
+        <div class="sidebar-section-label">WORKSPACE</div>
+
+        <nav class="sidebar-nav" aria-label="Workspace Navigation">
+          <button type="button" class="nav-item active" data-view="overview">
+            <span class="nav-item-left">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="18" rx="1.5"></rect>
+                <rect x="14" y="3" width="7" height="18" rx="1.5"></rect>
+              </svg>
+              <span>Overview</span>
+            </span>
+          </button>
+
+          <button type="button" class="nav-item" data-view="directory">
+            <span class="nav-item-left">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                <line x1="7" y1="9" x2="17" y2="9"></line>
+                <line x1="7" y1="13" x2="17" y2="13"></line>
+                <line x1="7" y1="17" x2="13" y2="17"></line>
+              </svg>
+              <span>Unit directory</span>
+            </span>
+            <span id="navUnitCountBadge" class="nav-badge">5</span>
+          </button>
+
+          <button type="button" class="nav-item" data-view="parade">
+            <span class="nav-item-left">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+                <line x1="9" y1="10" x2="9" y2="20"></line>
+              </svg>
+              <span>Parade state</span>
+            </span>
+            <span class="nav-badge">807</span>
+          </button>
+
+          <button type="button" class="nav-item" data-view="movements">
+            <span class="nav-item-left">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+              <span>Leave &amp; duty log</span>
+            </span>
+            <span id="navMovementBadge" class="nav-badge">6</span>
+          </button>
+        </nav>
+      </div>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-creed-box">
+          <div class="sidebar-creed-title">&#9876; WAR CRY</div>
+          <p class="sidebar-quote">
+            &ldquo;Badri Vishal Lal Ki Jai!&rdquo;<br />
+            <span style="font-size: 12.5px; color: var(--text-on-green-muted);">The brave never die, though they sleep in dust.</span>
+          </p>
+        </div>
+        <p class="sidebar-location">GARHWAL &middot; INDIA</p>
+      </div>
+    </aside>
+
+    <!-- Main Workspace Area -->
+    <div class="workspace-main">
+      <!-- Top Header Bar -->
+      <header class="topbar">
+        <div class="breadcrumbs">
+          <span class="breadcrumb-root">GARHWAL RIFLES</span>
+          <span class="breadcrumb-sep">/</span>
+          <span id="breadcrumbCurrent" class="breadcrumb-current">Overview</span>
+        </div>
+
+        <div class="topbar-right">
+          <span id="currentDateDisplay" class="topbar-date">Tue, 17 Nov 2026</span>
+
+          <button type="button" id="resetDemoBtn" class="btn-topbar-action" title="Restore original demo records">
+            &#8635; Reset demo
+          </button>
+
+          <div class="topbar-divider"></div>
+
+          <div class="user-profile-pill">
+            <div id="userAvatarInitial" class="user-avatar">A</div>
+            <div class="user-meta">
+              <span id="userNameDisplay" class="user-name">Administrator</span>
+              <span id="userRoleDisplay" class="user-role">Admin access</span>
+            </div>
+          </div>
+
+          <button type="button" id="signOutBtn" class="btn-topbar-action">
+            <span>Sign out</span>
+            <span aria-hidden="true">&#8599;</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Main Views Container -->
+      <main class="workspace-content">
+
+        <!-- ==================================================================
+             ATTRACTIVE HERO BANNER & MOTIVATIONAL BAR (INSIDE AFTER LOGIN)
+             ================================================================== -->
+        <div class="command-hero-banner">
+          <div class="command-hero-left">
+            <div class="command-hero-badge-row">
+              <span class="command-badge-gold">&#9733; THE GARHWAL RIFLES REGIMENT</span>
+              <span class="command-badge-sub">MOTTO: YUDHAYA KRIT NISHCHAYA (FIGHT WITH DETERMINATION)</span>
+            </div>
+            <h1 id="overviewGreeting" class="command-hero-title">Good day, Administrator.</h1>
+            <p class="command-hero-quote">
+              &ldquo;Courage in the heights, discipline in the ranks, victory in every mission.&rdquo;
+            </p>
+          </div>
+          <div class="command-hero-right">
+            <button type="button" class="btn-primary" data-goto="parade">
+              <span>Open Full Parade State Sheet (17 Nov 26)</span>
+              <span aria-hidden="true">&rarr;</span>
+            </button>
+            <span style="font-size: 12.5px; color: #dcd8cc; font-weight: 700;">
+              HQ LANSDOWNE &middot; OPERATIONAL READINESS PORTAL
+            </span>
+          </div>
+        </div>
+
+        <!-- Motivational Quote Strip -->
+        <div class="motivation-strip">
+          <div class="motivation-strip-left">
+            <span class="motivation-star">&#9733;</span>
+            <span id="dashboardMotivationText" class="motivation-strip-text">
+              &ldquo;Either I will come back after hoisting the Tricolour, or I will come back wrapped in it, but I will be back for sure.&rdquo;
+            </span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <span id="dashboardMotivationAuthor" class="motivation-strip-author">&mdash; Indian Army Ethos</span>
+            <button type="button" id="nextDashQuoteBtn" class="motivation-next-btn">Next &rarr;</button>
+          </div>
+        </div>
+
+        <!-- ==================================================================
+             VIEW 1: OVERVIEW
+             ================================================================== -->
+        <section id="view-overview" class="view-section active">
+          <!-- 4 Primary KPI Cards -->
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-card-top">
+                <span class="kpi-label">Sanctioned strength</span>
+                <span class="kpi-icon-box" title="Authorized establishment">&#9733;</span>
+              </div>
+              <div id="kpiSanctioned" class="kpi-value">2,963</div>
+              <div id="kpiSanctionedSub" class="kpi-subtext">Across listed units</div>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-card-top">
+                <span class="kpi-label">Present today</span>
+                <span class="kpi-icon-box" title="On parade today">&#10003;</span>
+              </div>
+              <div id="kpiPresent" class="kpi-value">2,675</div>
+              <div id="kpiPresentSub" class="kpi-subtext"><strong>90%</strong> of posted strength</div>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-card-top">
+                <span class="kpi-label">On leave / duty</span>
+                <span class="kpi-icon-box" title="Leave, TD, and attachment">&#9873;</span>
+              </div>
+              <div id="kpiAway" class="kpi-value">232</div>
+              <div id="kpiAwaySub" class="kpi-subtext">Recorded away strength</div>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-card-top">
+                <span class="kpi-label">Units reporting</span>
+                <span class="kpi-icon-box" title="Active reporting formations">&#9638;</span>
+              </div>
+              <div id="kpiUnits" class="kpi-value">5</div>
+              <div id="kpiUnitsSub" class="kpi-subtext">Active unit records</div>
+            </div>
+          </div>
+
+          <!-- Split Row: Parade State Distribution + Unit Strength Bars -->
+          <div class="overview-split-grid">
+            <!-- Left Panel: Parade State -->
+            <div class="panel-card">
+              <div class="panel-card-header">
+                <div>
+                  <h2 class="panel-card-title">Parade state</h2>
+                  <p class="panel-card-subtitle">Reported personnel status</p>
+                </div>
+                <button type="button" class="panel-link-btn" data-goto="parade">
+                  <span>Full parade sheet</span>
+                  <span aria-hidden="true">&rarr;</span>
+                </button>
+              </div>
+
+              <div class="parade-legend">
+                <span class="legend-item"><span class="legend-dot present"></span>Present</span>
+                <span class="legend-item"><span class="legend-dot leave"></span>Leave</span>
+                <span class="legend-item"><span class="legend-dot duty"></span>Duty / other</span>
+              </div>
+
+              <div class="stacked-bar-track" aria-label="Personnel status bar">
+                <div id="barPresent" class="stacked-segment present" style="width: 92.02%"></div>
+                <div id="barLeave" class="stacked-segment leave" style="width: 4.57%"></div>
+                <div id="barDuty" class="stacked-segment duty" style="width: 3.41%"></div>
+              </div>
+
+              <div class="parade-mini-stats">
+                <div>
+                  <div id="miniPresent" class="mini-stat-num">2,675</div>
+                  <div class="mini-stat-label">Present</div>
+                </div>
+                <div>
+                  <div id="miniLeave" class="mini-stat-num">133</div>
+                  <div class="mini-stat-label">On leave</div>
+                </div>
+                <div>
+                  <div id="miniDuty" class="mini-stat-num">99</div>
+                  <div class="mini-stat-label">Duty / other</div>
+                </div>
+              </div>
+
+              <div class="parade-footnote">
+                <div class="parade-footnote-left">
+                  <span class="legend-dot present"></span>
+                  <span id="overviewParadeFootnote">90% of sanctioned strength reported present</span>
+                </div>
+                <span id="overviewPostedNote">Posted: 2,907</span>
+              </div>
+            </div>
+
+            <!-- Right Panel: Unit Strength -->
+            <div class="panel-card">
+              <div class="panel-card-header">
+                <div>
+                  <h2 class="panel-card-title">Unit strength</h2>
+                  <p class="panel-card-subtitle">Current personnel by unit</p>
+                </div>
+                <button type="button" class="panel-link-btn" data-goto="directory">
+                  <span>All units</span>
+                  <span aria-hidden="true">&rarr;</span>
+                </button>
+              </div>
+
+              <div id="overviewUnitStrengthList" class="unit-strength-list">
+                <!-- Populated dynamically by app.js -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Advanced Overview Row: Battalion Coy Breakdown & Activity Audit Log -->
+          <div class="overview-advanced-grid">
+            <div class="panel-card">
+              <div class="panel-card-header">
+                <div>
+                  <h2 class="panel-card-title">Battalion parade return snapshot (17 Nov 26)</h2>
+                  <p class="panel-card-subtitle">Direct summary from A COY, B COY, C COY, D COY, SP COY &amp; HQ COY sheet</p>
+                </div>
+                <button type="button" class="panel-link-btn" data-goto="parade">View sheet &rarr;</button>
+              </div>
+
+              <div class="breakdown-grid">
+                <div class="breakdown-box">
+                  <div class="breakdown-box-label">Total Posted (Sheet)</div>
+                  <div id="sheetOverviewPosted" class="breakdown-box-val">807</div>
+                  <div class="breakdown-box-sub">15 OFFR &middot; 65 JCO &middot; 727 OR</div>
+                </div>
+                <div class="breakdown-box">
+                  <div class="breakdown-box-label">Present on Parade</div>
+                  <div id="sheetOverviewPresent" class="breakdown-box-val">184</div>
+                  <div class="breakdown-box-sub">5 OFFR &middot; 18 JCO &middot; 161 OR (23%)</div>
+                </div>
+                <div class="breakdown-box">
+                  <div class="breakdown-box-label">LVE / Out Emp</div>
+                  <div id="sheetOverviewOut" class="breakdown-box-val">159 / 464</div>
+                  <div class="breakdown-box-sub">Total Absent: 623</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel-card">
+              <div class="panel-card-header">
+                <div>
+                  <h2 class="panel-card-title">Recent command log</h2>
+                  <p class="panel-card-subtitle">Latest parade state &amp; directory updates</p>
+                </div>
+                <button type="button" id="clearLogBtn" class="panel-link-btn">Clear</button>
+              </div>
+
+              <div id="activityFeedList" class="activity-list">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- ==================================================================
+             VIEW 2: UNIT DIRECTORY
+             ================================================================== -->
+        <section id="view-directory" class="view-section">
+          <div class="page-header">
+            <div>
+              <h2 class="page-title">Unit directory</h2>
+              <p class="page-subtitle">View and manage unit level strength records.</p>
+            </div>
+            <div class="page-header-actions">
+              <button type="button" id="exportDirectoryCsvBtn" class="btn-secondary">
+                <span>&#8681; Export CSV</span>
+              </button>
+              <button type="button" id="openAddUnitModalBtn" class="btn-primary">
+                <span>+ Add unit</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Search & Filter Toolbar -->
+          <div class="directory-toolbar">
+            <div class="toolbar-left">
+              <div class="search-box">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input
+                  type="search"
+                  id="directorySearchInput"
+                  class="search-input"
+                  placeholder="Search units or locations..."
+                />
+              </div>
+
+              <select id="directoryStatusFilter" class="filter-select" aria-label="Filter by readiness">
+                <option value="all">All readiness states</option>
+                <option value="On track">On track (&ge;85%)</option>
+                <option value="Attention">Attention (75&ndash;84%)</option>
+                <option value="Critical">Critical (&lt;75%)</option>
+              </select>
+
+              <select id="directorySortSelect" class="filter-select" aria-label="Sort units">
+                <option value="default">Default order</option>
+                <option value="name-asc">Name (A &rarr; Z)</option>
+                <option value="sanctioned-desc">Sanctioned (High &rarr; Low)</option>
+                <option value="present-desc">Present (High &rarr; Low)</option>
+                <option value="readiness-desc">Readiness % (High &rarr; Low)</option>
+              </select>
+            </div>
+
+            <div class="toolbar-right">
+              <span id="directoryCountLabel">5 units</span>
+            </div>
+          </div>
+
+          <!-- Unit Directory Table Card -->
+          <div class="table-card">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>UNIT / FORMATION</th>
+                    <th>LOCATION</th>
+                    <th>SANCTIONED</th>
+                    <th>PRESENT</th>
+                    <th>AWAY</th>
+                    <th>READINESS</th>
+                    <th style="text-align: right;">ACTIONS</th>
+                  </tr>
+                </thead>
+                <tbody id="directoryTableBody">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="table-footer-note">
+            <span>Sample records are fictional and provided for interface demonstration only.</span>
+            <span>Click any unit name to inspect its full formation dossier.</span>
+          </div>
+        </section>
+
+
+        <!-- ==================================================================
+             VIEW 3: PARADE STATE (EXACT BATTALION PARADE STATE SHEET FROM IMAGE)
+             ================================================================== -->
+        <section id="view-parade" class="view-section">
+          <div class="page-header">
+            <div>
+              <h2 class="page-title">Parade State Return Sheet</h2>
+              <p class="page-subtitle">
+                Complete Company-wise Parade State (A COY, B COY, C COY, D COY, SP COY, HQ COY &amp; TOTAL STR). Click any cell to edit values; totals recalculate automatically.
+              </p>
+            </div>
+            <div class="page-header-actions">
+              <button type="button" id="openAddParadeRowModalBtn" class="btn-secondary">
+                <span>+ Add Duty / Detail Row</span>
+              </button>
+              <button type="button" id="exportParadeSheetCsvBtn" class="btn-secondary">
+                <span>&#8681; Export Excel / CSV</span>
+              </button>
+              <button type="button" id="printParadeBtn" class="btn-primary">
+                <span>&#128438; Print Parade Sheet</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 6 Company Summary Cards above the Sheet -->
+          <div id="paradeCoyCardsGrid" class="coy-cards-grid">
+            <!-- Populated dynamically from the sheet -->
+          </div>
+
+          <!-- EXACT PARADE STATE SHEET TABLE MATCHING ATTACHED PHOTO -->
+          <div class="parade-sheet-wrapper">
+            <table id="paradeSheetTable" class="parade-sheet-table">
+              <thead>
+                <tr class="sheet-title-row">
+                  <th colspan="23" id="paradeSheetTitleCell">PARADE STATE AS ON 17 NOV 26</th>
+                </tr>
+                <tr class="sheet-coy-row">
+                  <th rowspan="2" class="sheet-label-cell">PARTICULARS / DETAIL</th>
+                  <th colspan="3" class="coy-start">A COY</th>
+                  <th colspan="3" class="coy-start">B COY</th>
+                  <th colspan="3" class="coy-start">C COY</th>
+                  <th colspan="3" class="coy-start">D COY</th>
+                  <th colspan="3" class="coy-start">SP COY</th>
+                  <th colspan="3" class="coy-start">HQ COY</th>
+                  <th colspan="4" class="coy-start total-str-col">TOTAL STR</th>
+                </tr>
+                <tr class="sheet-rank-row">
+                  <!-- A COY -->
+                  <th class="coy-start">OFFR</th><th>JCO</th><th>OR</th>
+                  <!-- B COY -->
+                  <th class="coy-start">OFFR</th><th>JCO</th><th>OR</th>
+                  <!-- C COY -->
+                  <th class="coy-start">OFFR</th><th>JCO</th><th>OR</th>
+                  <!-- D COY -->
+                  <th class="coy-start">OFFR</th><th>JCO</th><th>OR</th>
+                  <!-- SP COY -->
+                  <th class="coy-start">OFFR</th><th>JCO</th><th>OR</th>
+                  <!-- HQ COY -->
+                  <th class="coy-start">OFFR</th><th>JCO</th><th>OR</th>
+                  <!-- TOTAL STR -->
+                  <th class="coy-start total-str-col">OFFR</th>
+                  <th class="total-str-col">JCO</th>
+                  <th class="total-str-col">OR</th>
+                  <th class="grand-total-col">TOTAL</th>
+                </tr>
+              </thead>
+              <tbody id="paradeSheetTbody">
+                <!-- Populated dynamically by app.js with all 33 rows + 6 summary rows -->
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-footer-note">
+            <span>Tip: Click any OFFR / JCO / OR cell in the sheet to update the figure. ABSENT, PRESENT, OUT EMP, TOTAL, PRESENT %, and LVE PERCENT % update automatically.</span>
+            <button type="button" id="resetParadeSheetBtn" class="row-action-btn">&#8635; Reset Sheet to Original Photo Figures</button>
+          </div>
+        </section>
+
+
+        <!-- ==================================================================
+             VIEW 4: LEAVE & DUTY REGISTER
+             ================================================================== -->
+        <section id="view-movements" class="view-section">
+          <div class="page-header">
+            <div>
+              <h2 class="page-title">Leave &amp; duty register</h2>
+              <p class="page-subtitle">Track personnel on annual leave, casual leave, courses, QRF, and temporary duty.</p>
+            </div>
+            <div class="page-header-actions">
+              <button type="button" id="openAddMovementModalBtn" class="btn-primary">
+                <span>+ Record movement</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="directory-toolbar">
+            <div class="toolbar-left">
+              <div class="search-box">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input
+                  type="search"
+                  id="movementSearchInput"
+                  class="search-input"
+                  placeholder="Search army no, rank, name, or unit..."
+                />
+              </div>
+
+              <select id="movementTypeFilter" class="filter-select">
+                <option value="all">All categories</option>
+                <option value="Leave">Leave (AL / CL)</option>
+                <option value="Duty / other">Duty / Course / TD</option>
+              </select>
+            </div>
+            <div class="toolbar-right">
+              <span id="movementCountLabel">6 active records</span>
+            </div>
+          </div>
+
+          <div class="table-card">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>PERSONNEL</th>
+                    <th>UNIT</th>
+                    <th>CATEGORY</th>
+                    <th>REMARKS / DESTINATION</th>
+                    <th>RETURN DATE</th>
+                    <th>STATUS</th>
+                    <th style="text-align: right;">ACTION</th>
+                  </tr>
+                </thead>
+                <tbody id="movementTableBody">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================
+       3. MODALS
+       ======================================================================== -->
+
+  <!-- Modal 1: Add / Edit Unit Record -->
+  <div id="unitModalBackdrop" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-labelledby="unitModalTitle">
+      <div class="modal-header">
+        <h3 id="unitModalTitle" class="modal-title">Add unit record</h3>
+        <button type="button" class="modal-close-btn" data-close-modal="unitModalBackdrop">&times;</button>
+      </div>
+      <form id="unitForm">
+        <input type="hidden" id="unitIdInput" />
+        <div class="modal-body">
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="unitNameInput" class="form-label">Unit / Formation Name</label>
+              <input type="text" id="unitNameInput" class="form-input" placeholder="e.g. 4th Battalion - Demo" required />
+            </div>
+            <div class="form-group">
+              <label for="unitLocationInput" class="form-label">Location</label>
+              <input type="text" id="unitLocationInput" class="form-input" placeholder="e.g. Lansdowne (Demo)" required />
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="unitCommanderInput" class="form-label">Commanding Officer / OC</label>
+              <input type="text" id="unitCommanderInput" class="form-input" placeholder="e.g. Col. R.S. Rawat" />
+            </div>
+            <div class="form-group">
+              <label for="unitRecordSubInput" class="form-label">Record Subtitle</label>
+              <input type="text" id="unitRecordSubInput" class="form-input" placeholder="Unit record" value="Unit record" />
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="unitSanctionedInput" class="form-label">Sanctioned Strength</label>
+              <input type="number" id="unitSanctionedInput" class="form-input" min="1" required />
+            </div>
+            <div class="form-group">
+              <label for="unitPostedInput" class="form-label">Posted Strength</label>
+              <input type="number" id="unitPostedInput" class="form-input" min="1" required />
+            </div>
+          </div>
+
+          <div class="form-row-3">
+            <div class="form-group">
+              <label for="unitPresentInput" class="form-label">Present</label>
+              <input type="number" id="unitPresentInput" class="form-input" min="0" required />
+            </div>
+            <div class="form-group">
+              <label for="unitLeaveInput" class="form-label">On Leave</label>
+              <input type="number" id="unitLeaveInput" class="form-input" min="0" required />
+            </div>
+            <div class="form-group">
+              <label for="unitDutyInput" class="form-label">Duty / Other</label>
+              <input type="number" id="unitDutyInput" class="form-input" min="0" required />
+            </div>
+          </div>
+
+          <div class="modal-computed-preview">
+            <span id="unitModalPreviewText">Away: 0 &middot; Readiness: 100%</span>
+            <span id="unitModalBalanceBadge" class="status-badge on-track">Balanced</span>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary" data-close-modal="unitModalBackdrop">Cancel</button>
+          <button type="submit" class="btn-primary">Save unit record</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 2: Edit Parade Sheet Single Cell / Company Row -->
+  <div id="cellEditModalBackdrop" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-labelledby="cellEditModalTitle">
+      <div class="modal-header">
+        <h3 id="cellEditModalTitle" class="modal-title">Update Parade Sheet Entry</h3>
+        <button type="button" class="modal-close-btn" data-close-modal="cellEditModalBackdrop">&times;</button>
+      </div>
+      <form id="cellEditForm">
+        <input type="hidden" id="cellEditRowKey" />
+        <input type="hidden" id="cellEditCoyKey" />
+        <div class="modal-body">
+          <div style="padding-bottom: 10px; border-bottom: 1px solid var(--border-warm);">
+            <div id="cellEditHeaderName" style="font-size: 18px; font-weight: 700;">LVE &mdash; A COY</div>
+            <div style="font-size: 13px; color: var(--text-muted);">Enter OFFR, JCO, and OR counts for this company and detail row.</div>
+          </div>
+
+          <div class="form-row-3">
+            <div class="form-group">
+              <label for="cellEditOffrInput" class="form-label">OFFR</label>
+              <input type="number" id="cellEditOffrInput" class="form-input" min="0" required />
+            </div>
+            <div class="form-group">
+              <label for="cellEditJcoInput" class="form-label">JCO</label>
+              <input type="number" id="cellEditJcoInput" class="form-input" min="0" required />
+            </div>
+            <div class="form-group">
+              <label for="cellEditOrInput" class="form-label">OR</label>
+              <input type="number" id="cellEditOrInput" class="form-input" min="0" required />
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary" data-close-modal="cellEditModalBackdrop">Cancel</button>
+          <button type="submit" class="btn-primary">Update Sheet</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 3: Add New Row to Parade State Sheet -->
+  <div id="addParadeRowModalBackdrop" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-labelledby="addParadeRowTitle">
+      <div class="modal-header">
+        <h3 id="addParadeRowTitle" class="modal-title">Add Duty / Deployment Row</h3>
+        <button type="button" class="modal-close-btn" data-close-modal="addParadeRowModalBackdrop">&times;</button>
+      </div>
+      <form id="addParadeRowForm">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="newParadeRowLabel" class="form-label">Detail / Deployment Name (Uppercase)</label>
+            <input type="text" id="newParadeRowLabel" class="form-input" placeholder="e.g. WINTER PATROL DETACHMENT" required />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary" data-close-modal="addParadeRowModalBackdrop">Cancel</button>
+          <button type="submit" class="btn-primary">Add Row to Sheet</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 4: Unit Dossier Inspection -->
+  <div id="dossierModalBackdrop" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-labelledby="dossierModalTitle">
+      <div class="modal-header">
+        <h3 id="dossierModalTitle" class="modal-title">Unit Dossier</h3>
+        <button type="button" class="modal-close-btn" data-close-modal="dossierModalBackdrop">&times;</button>
+      </div>
+      <div id="dossierModalBody" class="modal-body">
+        <!-- Populated dynamically -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-secondary" data-close-modal="dossierModalBackdrop">Close</button>
+        <button type="button" id="dossierEditUnitBtn" class="btn-primary">Edit record</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5: Record Personnel Leave / Duty Movement -->
+  <div id="movementModalBackdrop" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-labelledby="movementModalTitle">
+      <div class="modal-header">
+        <h3 id="movementModalTitle" class="modal-title">Record leave / duty movement</h3>
+        <button type="button" class="modal-close-btn" data-close-modal="movementModalBackdrop">&times;</button>
+      </div>
+      <form id="movementForm">
+        <div class="modal-body">
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="movRankNameInput" class="form-label">Rank &amp; Name</label>
+              <input type="text" id="movRankNameInput" class="form-input" placeholder="e.g. Hav. B.S. Negi" required />
+            </div>
+            <div class="form-group">
+              <label for="movServiceNoInput" class="form-label">Service No.</label>
+              <input type="text" id="movServiceNoInput" class="form-input" placeholder="e.g. GR-419082" required />
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="movUnitSelect" class="form-label">Unit</label>
+              <select id="movUnitSelect" class="form-input" required></select>
+            </div>
+            <div class="form-group">
+              <label for="movCategorySelect" class="form-label">Movement Category</label>
+              <select id="movCategorySelect" class="form-input" required>
+                <option value="Leave">Leave (Annual / Casual)</option>
+                <option value="Duty / other">Duty / Other (Course / TD)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="movRemarksInput" class="form-label">Remarks / Detail</label>
+              <input type="text" id="movRemarksInput" class="form-input" placeholder="e.g. 14 Days CL - Chamoli" required />
+            </div>
+            <div class="form-group">
+              <label for="movReturnDateInput" class="form-label">Expected Return</label>
+              <input type="text" id="movReturnDateInput" class="form-input" placeholder="e.g. 30 Nov 2026" required />
+            </div>
+          </div>
+
+          <div class="modal-computed-preview">
+            <span>Update unit parade count automatically?</span>
+            <label style="display: inline-flex; align-items: center; gap: 6px; cursor: pointer;">
+              <input type="checkbox" id="movSyncParadeCheckbox" checked />
+              <span>Sync with unit parade state</span>
+            </label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary" data-close-modal="movementModalBackdrop">Cancel</button>
+          <button type="submit" class="btn-primary">Save entry</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
