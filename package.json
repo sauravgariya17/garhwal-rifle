@@ -1,0 +1,24 @@
+{
+  "name": "garhwal-rifles-command-portal",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "19 Garhwal Rifles — Advanced React + Node.js/Express Command, Company, Leave Approval & Parade State Management Portal",
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "server": "node server/index.js",
+    "client": "vite",
+    "build": "vite build",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.5"
+  }
+}

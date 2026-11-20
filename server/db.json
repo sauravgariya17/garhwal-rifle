@@ -1,0 +1,1984 @@
+{
+  "users": [
+    {
+      "id": "user-adjutant",
+      "username": "adjutant",
+      "password": "Adjutant@19GR",
+      "role": "ADJUTANT_CO",
+      "displayName": "Adjutant / CO",
+      "rankTitle": "Col. R.S. Rawat (CO) / Maj. V.S. Bhandari (Adjutant)",
+      "unitTitle": "The Garhwal Rifles · Command HQ",
+      "accessLabel": "Command & Leave Approval Authority",
+      "assignedCoy": "ALL",
+      "securityQuestion": "What is the Raising Year of The Garhwal Rifles at Lansdowne?",
+      "securityAnswer": "1887",
+      "failedAttempts": 0,
+      "lockUntil": null,
+      "resetOtp": null,
+      "permissions": {
+        "canViewAllCompanies": true,
+        "canApproveLeave": true,
+        "canEditParadeSheet": true,
+        "canManageCompanies": true,
+        "canSignParadeState": true,
+        "canManageAutomations": true,
+        "canManageSecurity": true,
+        "canApplyLeave": true
+      }
+    },
+    {
+      "id": "user-sa",
+      "username": "sa_itcell",
+      "password": "ITCell@1887",
+      "role": "SA_IT_CELL",
+      "displayName": "SA / IT Cell",
+      "rankTitle": "Sub. (IT) D.S. Negi — Signal & IT Cell",
+      "unitTitle": "The Garhwal Rifles · IT & Parade Cell",
+      "accessLabel": "System Admin, Parade Compilation & AI Cell",
+      "assignedCoy": "ALL",
+      "securityQuestion": "What is the Raising Year of The Garhwal Rifles at Lansdowne?",
+      "securityAnswer": "1887",
+      "failedAttempts": 0,
+      "lockUntil": null,
+      "resetOtp": null,
+      "permissions": {
+        "canViewAllCompanies": true,
+        "canApproveLeave": false,
+        "canEditParadeSheet": true,
+        "canManageCompanies": true,
+        "canSignParadeState": false,
+        "canManageAutomations": true,
+        "canManageSecurity": true,
+        "canApplyLeave": true
+      }
+    },
+    {
+      "id": "user-clerk",
+      "username": "coy_clerk",
+      "password": "Clerk@Coy19",
+      "role": "COMPANY_CLERK",
+      "displayName": "Company Clerk",
+      "rankTitle": "Hav. (Clk) S.S. Panwar — Company Office Clerk",
+      "unitTitle": "A COY — 19 Garhwal Rifles",
+      "accessLabel": "Company Clerk Desk (Restricted Access)",
+      "assignedCoy": "A",
+      "securityQuestion": "What is the Raising Year of The Garhwal Rifles at Lansdowne?",
+      "securityAnswer": "1887",
+      "failedAttempts": 0,
+      "lockUntil": null,
+      "resetOtp": null,
+      "permissions": {
+        "canViewAllCompanies": false,
+        "canApproveLeave": false,
+        "canEditParadeSheet": false,
+        "canManageCompanies": false,
+        "canSignParadeState": false,
+        "canManageAutomations": false,
+        "canManageSecurity": false,
+        "canApplyLeave": true
+      }
+    }
+  ],
+  "companies": [
+    {
+      "id": "coy-a",
+      "coyKey": "A",
+      "name": "Alpha Company (A COY) — 19 Garhwal Rifles",
+      "battalion": "19 Garhwal Rifles",
+      "subtitle": "Assault Rifle Company · Forward Sector",
+      "location": "Leimakhong Forward Sector",
+      "commander": "Maj. V.S. Bhandari",
+      "secondInCommand": "Capt. A.S. Negi",
+      "companyJco": "Sub. H.S. Bisht",
+      "chm": "CHM Vikram Singh Rawat",
+      "cqmh": "CQMH Pradeep Singh",
+      "established": "Raised with 19 GARH RIF (Lansdowne)",
+      "roleBrief": "Primary forward rifle company responsible for high-altitude ridge dominance, Chakbama detachment security, and long-range perimeter patrolling.",
+      "platoons": [
+        {
+          "name": "No. 1 Rifle Platoon",
+          "cdr": "Sub. H.S. Bisht",
+          "str": 34,
+          "post": "Ridge Line Alpha-1"
+        },
+        {
+          "name": "No. 2 Rifle Platoon",
+          "cdr": "Nb. Sub. R.S. Panwar",
+          "str": 36,
+          "post": "Chakbama Outpost"
+        },
+        {
+          "name": "No. 3 Rifle Platoon",
+          "cdr": "Nb. Sub. M.S. Gusain",
+          "str": 39,
+          "post": "Forward Base Leimakhong"
+        }
+      ],
+      "logistics": {
+        "weapons": 98,
+        "comms": 96,
+        "winterGear": 100,
+        "rationsDays": 45
+      },
+      "sanctioned": 120,
+      "posted": 109,
+      "present": 74,
+      "leave": 23,
+      "duty": 12
+    },
+    {
+      "id": "coy-b",
+      "coyKey": "B",
+      "name": "Bravo Company (B COY) — 19 Garhwal Rifles",
+      "battalion": "19 Garhwal Rifles",
+      "subtitle": "Rifle Company · Bishnupur Sector",
+      "location": "Bishnupur Tactical Base",
+      "commander": "Maj. A.K. Rawat",
+      "secondInCommand": "Capt. S.S. Chauhan",
+      "companyJco": "Sub. K.S. Kandari",
+      "chm": "CHM Suraj Singh Panwar",
+      "cqmh": "CQMH Dinesh Bartwal",
+      "established": "Raised with 19 GARH RIF (Lansdowne)",
+      "roleBrief": "Tactical rifle wing guarding Bishnupur sector lines of communication and providing reserve strike elements for QRF-2 operations.",
+      "platoons": [
+        {
+          "name": "No. 4 Rifle Platoon",
+          "cdr": "Sub. K.S. Kandari",
+          "str": 37,
+          "post": "Bishnupur North Gate"
+        },
+        {
+          "name": "No. 5 Rifle Platoon",
+          "cdr": "Nb. Sub. D.S. Sajwan",
+          "str": 38,
+          "post": "Sector Highway Grid"
+        },
+        {
+          "name": "No. 6 Rifle Platoon",
+          "cdr": "Nb. Sub. T.S. Rawat",
+          "str": 38,
+          "post": "QRF Reserve Stand-by"
+        }
+      ],
+      "logistics": {
+        "weapons": 97,
+        "comms": 95,
+        "winterGear": 94,
+        "rationsDays": 40
+      },
+      "sanctioned": 120,
+      "posted": 113,
+      "present": 71,
+      "leave": 31,
+      "duty": 11
+    },
+    {
+      "id": "coy-c",
+      "coyKey": "C",
+      "name": "Charlie Company (C COY) — 19 Garhwal Rifles",
+      "battalion": "19 Garhwal Rifles",
+      "subtitle": "Rifle & QRF-2 Mobile Wing",
+      "location": "Chakbama / QRF-2 Sector",
+      "commander": "Maj. D.S. Gusain",
+      "secondInCommand": "Capt. R.K. Thapliyal",
+      "companyJco": "Sub. B.S.Butola",
+      "chm": "CHM Mohan Singh",
+      "cqmh": "CQMH Sanjay Singh Bisht",
+      "established": "Raised with 19 GARH RIF (Lansdowne)",
+      "roleBrief": "Lead Quick Reaction Force (QRF-2) company specializing in rapid mechanized insertion, convoy escort, and counter-infiltration sweeps.",
+      "platoons": [
+        {
+          "name": "No. 7 QRF Platoon",
+          "cdr": "Sub. B.S. Butola",
+          "str": 40,
+          "post": "QRF-2 Mobile Column A"
+        },
+        {
+          "name": "No. 8 QRF Platoon",
+          "cdr": "Nb. Sub. P.S. Negi",
+          "str": 39,
+          "post": "QRF-2 Mobile Column B"
+        },
+        {
+          "name": "No. 9 Rifle Platoon",
+          "cdr": "Nb. Sub. V.S. Rawat",
+          "str": 40,
+          "post": "Chakbama Tactical Node"
+        }
+      ],
+      "logistics": {
+        "weapons": 99,
+        "comms": 98,
+        "winterGear": 97,
+        "rationsDays": 50
+      },
+      "sanctioned": 125,
+      "posted": 119,
+      "present": 92,
+      "leave": 13,
+      "duty": 14
+    },
+    {
+      "id": "coy-d",
+      "coyKey": "D",
+      "name": "Delta Company (D COY) — 19 Garhwal Rifles",
+      "battalion": "19 Garhwal Rifles",
+      "subtitle": "Rifle & QRF-1 Strike Wing",
+      "location": "Senapati / QRF-1 Detachment",
+      "commander": "Maj. R.P. Chauhan",
+      "secondInCommand": "Capt. N.S. Bisht",
+      "companyJco": "Sub. G.S. Bhandari",
+      "chm": "CHM Kuldeep Singh",
+      "cqmh": "CQMH Naveen Rawat",
+      "established": "Raised with 19 GARH RIF (Lansdowne)",
+      "roleBrief": "Designated QRF-1 forward deployment wing conducting high-readiness area domination and night ambush patrols in Senapati sector.",
+      "platoons": [
+        {
+          "name": "No. 10 QRF-1 Platoon",
+          "cdr": "Sub. G.S. Bhandari",
+          "str": 38,
+          "post": "Senapati Forward Grid"
+        },
+        {
+          "name": "No. 11 QRF-1 Platoon",
+          "cdr": "Nb. Sub. A.S. Panwar",
+          "str": 38,
+          "post": "Mobile Strike Group"
+        },
+        {
+          "name": "No. 12 Rifle Platoon",
+          "cdr": "Nb. Sub. S.S. Gusain",
+          "str": 38,
+          "post": "59 Mtn Bde Escort"
+        }
+      ],
+      "logistics": {
+        "weapons": 100,
+        "comms": 97,
+        "winterGear": 96,
+        "rationsDays": 42
+      },
+      "sanctioned": 120,
+      "posted": 114,
+      "present": 84,
+      "leave": 15,
+      "duty": 15
+    },
+    {
+      "id": "coy-sp",
+      "coyKey": "SP",
+      "name": "Support Company (SP COY) — 19 Garhwal Rifles",
+      "battalion": "19 Garhwal Rifles",
+      "subtitle": "Heavy Weapons, 81mm Mortar & ATGM Wing",
+      "location": "Main Fire Support Base",
+      "commander": "Maj. S.S. Negi",
+      "secondInCommand": "Capt. P.S. Rawat",
+      "companyJco": "Sub. Maj. K.S. Bartwal",
+      "chm": "CHM Rajendra Singh",
+      "cqmh": "CQMH Harish Kandari",
+      "established": "Fire Support & Heavy Weapons Wing",
+      "roleBrief": "Provides battalion-level heavy fire support including 81mm Mortar Platoon, Anti-Tank Guided Missile (ATGM) Detachment, Medium Machine Gun (MMG) section, and Assault Pioneers.",
+      "platoons": [
+        {
+          "name": "81mm Mortar Platoon",
+          "cdr": "Sub. J.S. Rawat",
+          "str": 48,
+          "post": "Fire Support Base Alpha"
+        },
+        {
+          "name": "ATGM & Anti-Tank Wing",
+          "cdr": "Nb. Sub. K.S. Bartwal",
+          "str": 46,
+          "post": "High Ground Defilade"
+        },
+        {
+          "name": "Assault Pioneer & Sniper Pl",
+          "cdr": "Nb. Sub. H.S. Negi",
+          "str": 51,
+          "post": "Tactical Recon Base"
+        }
+      ],
+      "logistics": {
+        "weapons": 99,
+        "comms": 98,
+        "winterGear": 98,
+        "rationsDays": 48
+      },
+      "sanctioned": 155,
+      "posted": 145,
+      "present": 98,
+      "leave": 30,
+      "duty": 17
+    },
+    {
+      "id": "coy-hq",
+      "coyKey": "HQ",
+      "name": "Headquarters Company (HQ COY) — 19 Garhwal Rifles",
+      "battalion": "19 Garhwal Rifles",
+      "subtitle": "Command, Signals, MT, Medical & QM Wing",
+      "location": "Battalion Command HQ",
+      "commander": "Lt. Col. H.S. Rawat",
+      "secondInCommand": "Maj. V.K.Dimri",
+      "companyJco": "Sub. Maj. R.S. Negi",
+      "chm": "BHM Devendra Singh",
+      "cqmh": "BQMH Anil Sajwan",
+      "established": "Battalion Command & Logistics Nerve Centre",
+      "roleBrief": "Manages Battalion Headquarters administration, Signals & Cyber Communications, Mechanical Transport (MT) fleet, Regimental Medical Inspection (MI) Room, and Quartermaster ordinance stores.",
+      "platoons": [
+        {
+          "name": "Signal & IT Platoon",
+          "cdr": "Sub. (IT) D.S. Negi",
+          "str": 52,
+          "post": "Command Signal Exchange"
+        },
+        {
+          "name": "Mechanical Transport (MT) Pl",
+          "cdr": "Sub. M.S. Chauhan",
+          "str": 78,
+          "post": "Battalion MT Park"
+        },
+        {
+          "name": "QM, Medical & Admin Wing",
+          "cdr": "Nb. Sub. S.P. Dimri",
+          "str": 77,
+          "post": "Main Quartermaster Complex"
+        }
+      ],
+      "logistics": {
+        "weapons": 96,
+        "comms": 100,
+        "winterGear": 99,
+        "rationsDays": 60
+      },
+      "sanctioned": 215,
+      "posted": 207,
+      "present": 140,
+      "leave": 47,
+      "duty": 20
+    },
+    {
+      "id": "coy-ghatak",
+      "coyKey": "A",
+      "name": "Ghatak Platoon (Commando Coy) — 19 Garhwal Rifles",
+      "battalion": "19 Garhwal Rifles",
+      "subtitle": "Special Heliborne & Mountain Assault Wing",
+      "location": "High Altitude Recon Post",
+      "commander": "Capt. R.S. Panwar",
+      "secondInCommand": "Sub. V.S. Gusain",
+      "companyJco": "Sub. V.S. Gusain",
+      "chm": "Hav. (Cdo) Rohit Rawat",
+      "cqmh": "Hav. (Cdo) Sandeep Negi",
+      "established": "Elite Commando Spearhead",
+      "roleBrief": "Specially trained mountain warfare and close-quarter battle commando platoon capable of deep reconnaissance, raid operations, and cliff assault.",
+      "platoons": [
+        {
+          "name": "Assault Team Alpha",
+          "cdr": "Sub. V.S. Gusain",
+          "str": 20,
+          "post": "Recon Ridge North"
+        },
+        {
+          "name": "Sniper & Demolition Team Bravo",
+          "cdr": "Nb. Sub. A.K. Bisht",
+          "str": 20,
+          "post": "Forward Helipad Base"
+        }
+      ],
+      "logistics": {
+        "weapons": 100,
+        "comms": 100,
+        "winterGear": 100,
+        "rationsDays": 45
+      },
+      "sanctioned": 42,
+      "posted": 40,
+      "present": 36,
+      "leave": 2,
+      "duty": 2
+    },
+    {
+      "id": "coy-16gr",
+      "coyKey": "SP",
+      "name": "Attached Rifle Company — 16 Garhwal Rifles",
+      "battalion": "16 Garhwal Rifles (16 GARH RIF)",
+      "subtitle": "Sister Formation Tactical Attachment",
+      "location": "Dimapur / Transit Sector",
+      "commander": "Maj. K.S. Bisht",
+      "secondInCommand": "Capt. D.S. Rawat",
+      "companyJco": "Sub. N.S. Panwar",
+      "chm": "CHM Mukesh Bhandari",
+      "cqmh": "CQMH Ramesh Negi",
+      "established": "16th Battalion, The Garhwal Rifles",
+      "roleBrief": "Attached company from sister battalion 16 Garhwal Rifles providing joint sector reinforcement, transit security at Dimapur, and inter-battalion training exchange.",
+      "platoons": [
+        {
+          "name": "16 GR Detachment Platoon 1",
+          "cdr": "Sub. N.S. Panwar",
+          "str": 52,
+          "post": "Dimapur Transit Camp"
+        },
+        {
+          "name": "16 GR Detachment Platoon 2",
+          "cdr": "Nb. Sub. R.K. Sajwan",
+          "str": 52,
+          "post": "Joint Sector Reserve"
+        }
+      ],
+      "logistics": {
+        "weapons": 97,
+        "comms": 96,
+        "winterGear": 95,
+        "rationsDays": 38
+      },
+      "sanctioned": 110,
+      "posted": 104,
+      "present": 91,
+      "leave": 7,
+      "duty": 6
+    },
+    {
+      "id": "coy-grrc",
+      "coyKey": "HQ",
+      "name": "Training Company — 1/9 GRRC Lansdowne",
+      "battalion": "The Garhwal Rifles Regimental Centre",
+      "subtitle": "Recruit & Young Soldiers Training Wing",
+      "location": "Lansdowne, Uttarakhand",
+      "commander": "Lt. Col. M.S. Bartwal",
+      "secondInCommand": "Maj. S.K. Rawat",
+      "companyJco": "Sub. Maj. H.S. Gusain",
+      "chm": "CHM (Instr) B.S. Negi",
+      "cqmh": "CQMH P.S. Bhandari",
+      "established": "Lansdowne Regimental Centre (Est. 1887)",
+      "roleBrief": "Premier instructional company at The Garhwal Rifles Regimental Centre (Lansdowne) shaping Agniveers and Riflemen in musketry, fieldcraft, and Garhwali martial traditions.",
+      "platoons": [
+        {
+          "name": "Drill & Weapons Wing",
+          "cdr": "Sub. H.S. Gusain",
+          "str": 88,
+          "post": "Parade Ground Lansdowne"
+        },
+        {
+          "name": "Fieldcraft & Battle Obstacle Wing",
+          "cdr": "Nb. Sub. K.S. Rawat",
+          "str": 86,
+          "post": "Kalagarh Tactical Range"
+        }
+      ],
+      "logistics": {
+        "weapons": 98,
+        "comms": 99,
+        "winterGear": 100,
+        "rationsDays": 60
+      },
+      "sanctioned": 180,
+      "posted": 174,
+      "present": 158,
+      "leave": 10,
+      "duty": 6
+    }
+  ],
+  "paradeSheet": [
+    {
+      "key": "POSTED",
+      "label": "POSTED",
+      "coys": {
+        "A": {
+          "offr": 2,
+          "jco": 7,
+          "or": 100
+        },
+        "B": {
+          "offr": 2,
+          "jco": 7,
+          "or": 104
+        },
+        "C": {
+          "offr": 2,
+          "jco": 8,
+          "or": 109
+        },
+        "D": {
+          "offr": 2,
+          "jco": 7,
+          "or": 105
+        },
+        "SP": {
+          "offr": 3,
+          "jco": 16,
+          "or": 126
+        },
+        "HQ": {
+          "offr": 4,
+          "jco": 20,
+          "or": 183
+        }
+      }
+    },
+    {
+      "key": "LVE",
+      "label": "LVE",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 1,
+          "or": 22
+        },
+        "B": {
+          "offr": 1,
+          "jco": 1,
+          "or": 29
+        },
+        "C": {
+          "offr": 1,
+          "jco": 1,
+          "or": 11
+        },
+        "D": {
+          "offr": 0,
+          "jco": 1,
+          "or": 14
+        },
+        "SP": {
+          "offr": 1,
+          "jco": 3,
+          "or": 26
+        },
+        "HQ": {
+          "offr": 2,
+          "jco": 8,
+          "or": 37
+        }
+      }
+    },
+    {
+      "key": "MH",
+      "label": "MH",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 4
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        }
+      }
+    },
+    {
+      "key": "SICK_LVE",
+      "label": "SICK LVE",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        }
+      }
+    },
+    {
+      "key": "TD_WKSP",
+      "label": "TD/210 FD/3 CORPS WKSP",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 4
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 1,
+          "or": 6
+        }
+      }
+    },
+    {
+      "key": "CHAKBAMA",
+      "label": "CHAKBAMA",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 1,
+          "or": 10
+        },
+        "B": {
+          "offr": 0,
+          "jco": 1,
+          "or": 6
+        },
+        "C": {
+          "offr": 0,
+          "jco": 2,
+          "or": 8
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 6
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 13
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 11
+        }
+      }
+    },
+    {
+      "key": "DIMAPUR",
+      "label": "220 T.C/TC GD DIMAPUR",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "C": {
+          "offr": 0,
+          "jco": 1,
+          "or": 6
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 1,
+          "or": 0
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 3
+        }
+      }
+    },
+    {
+      "key": "JAG_BR",
+      "label": "JAG BR",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        }
+      }
+    },
+    {
+      "key": "LMS_TRANSIT",
+      "label": "LMS TRANSIT",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        }
+      }
+    },
+    {
+      "key": "LEIMAKHONG_DIV",
+      "label": "LEIMAKHONG DIV",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        }
+      }
+    },
+    {
+      "key": "GOC_HOUSE",
+      "label": "GOC HOUSE LIEMAKHONG",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        }
+      }
+    },
+    {
+      "key": "EC",
+      "label": "EC",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        }
+      }
+    },
+    {
+      "key": "QRF_1",
+      "label": "QRF -1 (D) COY",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 4
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 6
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 5
+        },
+        "D": {
+          "offr": 2,
+          "jco": 3,
+          "or": 53
+        },
+        "SP": {
+          "offr": 1,
+          "jco": 2,
+          "or": 12
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 2,
+          "or": 27
+        }
+      }
+    },
+    {
+      "key": "TA_165",
+      "label": "165 TA",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        }
+      }
+    },
+    {
+      "key": "MTN_BDE_59",
+      "label": "59 MTN BDE",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        }
+      }
+    },
+    {
+      "key": "CDR_QRT",
+      "label": "CDR QRT BISHNUPUR",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 1,
+          "or": 1
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 4
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 3
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 3
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        }
+      }
+    },
+    {
+      "key": "QRF_2",
+      "label": "QRF -2 ( C ) COY",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 3,
+          "or": 27
+        },
+        "B": {
+          "offr": 1,
+          "jco": 3,
+          "or": 17
+        },
+        "C": {
+          "offr": 1,
+          "jco": 3,
+          "or": 48
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 2,
+          "or": 16
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 2,
+          "or": 22
+        }
+      }
+    },
+    {
+      "key": "GARH_ATT_16",
+      "label": "16 GARH RIF ATT",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        }
+      }
+    },
+    {
+      "key": "CADRE_REL",
+      "label": "CADRE RELIEVERS",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        }
+      }
+    },
+    {
+      "key": "GRRC_1_9",
+      "label": "1/9 GRRC",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 3
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 3
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        }
+      }
+    },
+    {
+      "key": "ATT_GRRC_INSTR",
+      "label": "ATT GRRC/NODE INSTR",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 3
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        }
+      }
+    },
+    {
+      "key": "DEPOT_DRILL",
+      "label": "DEPOT DRILL",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        }
+      }
+    },
+    {
+      "key": "MAIN_COURSE",
+      "label": "MAIN COURSE",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 1,
+          "or": 3
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        }
+      }
+    },
+    {
+      "key": "PRE_COURSE",
+      "label": "PRE COURSE",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 3
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 1,
+          "or": 1
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        }
+      }
+    },
+    {
+      "key": "MED_COMP",
+      "label": "MED COMP TREATMENT",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 1,
+          "or": 0
+        }
+      }
+    },
+    {
+      "key": "BUDDY",
+      "label": "BUDDY",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 3
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        }
+      }
+    },
+    {
+      "key": "ESM_GUARD",
+      "label": "ESM COLONY GUARD",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        }
+      }
+    },
+    {
+      "key": "ATT_OUT_REC",
+      "label": "ATT OUT( BY RECORDS)",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        }
+      }
+    },
+    {
+      "key": "DWARKA_GD",
+      "label": "DWARKA VILL GD",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        }
+      }
+    },
+    {
+      "key": "MR_II_I",
+      "label": "MR-II, MR-I",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        }
+      }
+    },
+    {
+      "key": "BHAIRAV_BN",
+      "label": "BHAIRAV BN",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "C": {
+          "offr": 0,
+          "jco": 1,
+          "or": 0
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 3
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 1
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 4
+        }
+      }
+    },
+    {
+      "key": "SENAPATI_QRT",
+      "label": "SENAPATI QRT",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        }
+      }
+    },
+    {
+      "key": "IMA_TRG",
+      "label": "IMA OFFR TRG",
+      "coys": {
+        "A": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "B": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "C": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "D": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        },
+        "SP": {
+          "offr": 0,
+          "jco": 0,
+          "or": 2
+        },
+        "HQ": {
+          "offr": 0,
+          "jco": 0,
+          "or": 0
+        }
+      }
+    }
+  ],
+  "leaves": [
+    {
+      "id": "lve-101",
+      "rankName": "Rfn. Ankit Singh Negi",
+      "serviceNo": "GR-438910",
+      "rankCategory": "OR",
+      "companyId": "coy-a",
+      "coyKey": "A",
+      "companyName": "Alpha Company (A COY) — 19 Garhwal Rifles",
+      "category": "Leave",
+      "leaveType": "Annual Leave (AL)",
+      "reason": "Sister marriage ceremony at Chamoli and urgent domestic family responsibility at ancestral village.",
+      "destination": "Chamoli, Uttarakhand",
+      "fromDate": "2026-11-21",
+      "toDate": "2026-12-04",
+      "days": 14,
+      "status": "PENDING_ADJUTANT",
+      "requestedBy": "Company Clerk (A COY)",
+      "requestedAt": "20 Nov 2026, 08:15 AM",
+      "approvedBy": null,
+      "approvedAt": null,
+      "adjutantRemarks": "Awaiting Adjutant / CO review and sanction."
+    },
+    {
+      "id": "lve-102",
+      "rankName": "Nk. Vikram Singh Rawat",
+      "serviceNo": "GR-425118",
+      "rankCategory": "OR",
+      "companyId": "coy-b",
+      "coyKey": "B",
+      "companyName": "Bravo Company (B COY) — 19 Garhwal Rifles",
+      "category": "Leave",
+      "leaveType": "Casual Leave (CL)",
+      "reason": "Father medical checkup at Military Hospital Dehradun & pension documentation.",
+      "destination": "Dehradun, Uttarakhand",
+      "fromDate": "2026-11-22",
+      "toDate": "2026-11-29",
+      "days": 8,
+      "status": "PENDING_ADJUTANT",
+      "requestedBy": "Company Clerk (B COY)",
+      "requestedAt": "20 Nov 2026, 09:05 AM",
+      "approvedBy": null,
+      "approvedAt": null,
+      "adjutantRemarks": "Forwarded by OC B Coy for Adjutant approval."
+    },
+    {
+      "id": "lve-103",
+      "rankName": "Sub. Maj. H.S. Bisht",
+      "serviceNo": "GR-104821",
+      "rankCategory": "JCO",
+      "companyId": "coy-a",
+      "coyKey": "A",
+      "companyName": "Alpha Company (A COY) — 19 Garhwal Rifles",
+      "category": "Duty / other",
+      "leaveType": "Temporary Duty (TD)",
+      "reason": "Commanding CHAKBAMA forward post winter stocking and perimeter inspection detail.",
+      "destination": "Chakbama Forward Post",
+      "fromDate": "2026-11-12",
+      "toDate": "2026-11-24",
+      "days": 13,
+      "status": "APPROVED",
+      "requestedBy": "Company Clerk (A COY)",
+      "requestedAt": "11 Nov 2026, 05:30 PM",
+      "approvedBy": "Adjutant / CO (Garhwal Rifles)",
+      "approvedAt": "11 Nov 2026, 06:10 PM",
+      "adjutantRemarks": "Sanctioned. Detail reflected in Chakbama Parade State row."
+    },
+    {
+      "id": "lve-104",
+      "rankName": "Hav. Suraj Singh Panwar",
+      "serviceNo": "GR-418920",
+      "rankCategory": "OR",
+      "companyId": "coy-b",
+      "coyKey": "B",
+      "companyName": "Bravo Company (B COY) — 19 Garhwal Rifles",
+      "category": "Leave",
+      "leaveType": "Casual Leave (CL)",
+      "reason": "14 Days Casual Leave for house construction completion after monsoon damage in Rudraprayag.",
+      "destination": "Rudraprayag, Uttarakhand",
+      "fromDate": "2026-11-13",
+      "toDate": "2026-11-26",
+      "days": 14,
+      "status": "APPROVED",
+      "requestedBy": "Company Clerk (B COY)",
+      "requestedAt": "12 Nov 2026, 10:00 AM",
+      "approvedBy": "Adjutant / CO (Garhwal Rifles)",
+      "approvedAt": "12 Nov 2026, 11:30 AM",
+      "adjutantRemarks": "Approved by Adjutant. Railway warrant issued."
+    },
+    {
+      "id": "lve-105",
+      "rankName": "Nk. Pradeep Kandari",
+      "serviceNo": "GR-429104",
+      "rankCategory": "OR",
+      "companyId": "coy-c",
+      "coyKey": "C",
+      "companyName": "Charlie Company (C COY) — 19 Garhwal Rifles",
+      "category": "Duty / other",
+      "leaveType": "Course / Detachment",
+      "reason": "QRF-2 (C) COY mobile tactical patrol and quick reaction readiness deployment.",
+      "destination": "QRF-2 Sector Grid",
+      "fromDate": "2026-11-10",
+      "toDate": "2026-12-05",
+      "days": 26,
+      "status": "APPROVED",
+      "requestedBy": "Company Clerk (C COY)",
+      "requestedAt": "09 Nov 2026, 04:00 PM",
+      "approvedBy": "Adjutant / CO (Garhwal Rifles)",
+      "approvedAt": "09 Nov 2026, 05:00 PM",
+      "adjutantRemarks": "Operational deployment order signed."
+    },
+    {
+      "id": "lve-106",
+      "rankName": "Rfn. Deepak Sajwan",
+      "serviceNo": "GR-439027",
+      "rankCategory": "OR",
+      "companyId": "coy-hq",
+      "coyKey": "HQ",
+      "companyName": "Headquarters Company (HQ COY) — 19 Garhwal Rifles",
+      "category": "Leave",
+      "leaveType": "Casual Leave (CL)",
+      "reason": "10 Days CL to attend child naming ceremony at Tehri Garhwal.",
+      "destination": "Tehri Garhwal, Uttarakhand",
+      "fromDate": "2026-11-15",
+      "toDate": "2026-11-24",
+      "days": 10,
+      "status": "APPROVED",
+      "requestedBy": "Company Clerk (HQ COY)",
+      "requestedAt": "14 Nov 2026, 09:20 AM",
+      "approvedBy": "Adjutant / CO (Garhwal Rifles)",
+      "approvedAt": "14 Nov 2026, 11:00 AM",
+      "adjutantRemarks": "Approved."
+    },
+    {
+      "id": "lve-107",
+      "rankName": "Nb. Sub. K.S. Bartwal",
+      "serviceNo": "GR-208411",
+      "rankCategory": "JCO",
+      "companyId": "coy-sp",
+      "coyKey": "SP",
+      "companyName": "Support Company (SP COY) — 19 Garhwal Rifles",
+      "category": "Leave",
+      "leaveType": "Annual Leave (AL)",
+      "reason": "Personal land registration work at Pauri Garhwal.",
+      "destination": "Pauri Garhwal, Uttarakhand",
+      "fromDate": "2026-11-23",
+      "toDate": "2026-12-07",
+      "days": 15,
+      "status": "PENDING_ADJUTANT",
+      "requestedBy": "Company Clerk (SP COY)",
+      "requestedAt": "20 Nov 2026, 10:30 AM",
+      "approvedBy": null,
+      "approvedAt": null,
+      "adjutantRemarks": "Pending Adjutant confirmation due to mortar firing exercise."
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-1",
+      "targetRole": "ADJUTANT_CO",
+      "type": "LEAVE_REQUEST",
+      "leaveId": "lve-101",
+      "title": "Leave Approval Required — Rfn. Ankit Singh Negi (A COY)",
+      "message": "Company Clerk (A COY) submitted 14 Days Annual Leave (21 Nov – 04 Dec 2026). Reason: Sister marriage ceremony at Chamoli.",
+      "time": "10 mins ago",
+      "read": false
+    },
+    {
+      "id": "notif-2",
+      "targetRole": "ADJUTANT_CO",
+      "type": "LEAVE_REQUEST",
+      "leaveId": "lve-102",
+      "title": "Leave Approval Required — Nk. Vikram Singh Rawat (B COY)",
+      "message": "Company Clerk (B COY) submitted 8 Days Casual Leave (22 Nov – 29 Nov 2026). Reason: Father medical checkup at MH Dehradun.",
+      "time": "35 mins ago",
+      "read": false
+    },
+    {
+      "id": "notif-3",
+      "targetRole": "ADJUTANT_CO",
+      "type": "LEAVE_REQUEST",
+      "leaveId": "lve-107",
+      "title": "Leave Approval Required — Nb. Sub. K.S. Bartwal (SP COY)",
+      "message": "Company Clerk (SP COY) submitted 15 Days Annual Leave (23 Nov – 07 Dec 2026). Reason: Land registration at Pauri Garhwal.",
+      "time": "1 hr ago",
+      "read": false
+    },
+    {
+      "id": "notif-4",
+      "targetRole": "COMPANY_CLERK",
+      "type": "LEAVE_APPROVED",
+      "leaveId": "lve-104",
+      "title": "Adjutant Approved Leave — Hav. Suraj Singh Panwar",
+      "message": "Adjutant / CO approved 14 Days CL (13 Nov – 26 Nov 2026). Parade State updated automatically.",
+      "time": "Yesterday",
+      "read": false
+    },
+    {
+      "id": "notif-5",
+      "targetRole": "SA_IT_CELL",
+      "type": "AI_ALERT",
+      "leaveId": null,
+      "title": "AI Quota Watchdog: B COY OR Leave at 27.88%",
+      "message": "Automated Parade Analyzer detected B COY OR Leave exceeds the 25% norm (29 of 104 ORs on leave). Advisory sent to Adjutant.",
+      "time": "Today, 06:30 AM",
+      "read": false
+    }
+  ],
+  "automations": [
+    {
+      "id": "auto-sync-parade",
+      "key": "autoSyncParadeOnApproval",
+      "name": "Auto-Sync Parade State on Adjutant Leave Approval",
+      "description": "Automatically increments Company LVE count in Parade State Sheet and deducts Present strength only after Adjutant / CO approves a leave request.",
+      "enabled": true,
+      "category": "Parade Sync",
+      "lastTriggered": "Today, 08:00 AM"
+    },
+    {
+      "id": "auto-quota-guard",
+      "key": "autoLeaveQuotaGuard",
+      "name": "AI 25% Company Leave Cap Guardrail",
+      "description": "Automatically attaches a High-Quota Warning on leave requests when a Company’s OR leave exceeds 25% of posted strength.",
+      "enabled": true,
+      "category": "AI Policy Guard",
+      "lastTriggered": "Today, 09:05 AM"
+    },
+    {
+      "id": "auto-lockout-shield",
+      "key": "autoBruteForceLockout",
+      "name": "3-Attempt Wrong Password Time-Limit Lockout (60s)",
+      "description": "Locks any module account for 60 seconds after 3 wrong password attempts and dispatches a security alert to SA / IT Cell & Adjutant.",
+      "enabled": true,
+      "category": "Cyber Security",
+      "lastTriggered": "Active 24x7"
+    },
+    {
+      "id": "auto-return-reminder",
+      "key": "autoReturnWatchdog",
+      "name": "Automated Leave Expiry & Return Watchdog",
+      "description": "Scans active leaves daily at 06:00 HRS and flags personnel due to report back within 72 hours.",
+      "enabled": true,
+      "category": "Roll Call Automation",
+      "lastTriggered": "Today, 06:00 AM"
+    }
+  ],
+  "activityLogs": [
+    {
+      "id": "log-1795192794241-785",
+      "text": "<strong>Adjutant / CO</strong> (Col. R.S. Rawat (CO) / Maj. V.S. Bhandari (Adjutant)) signed into 19 Garhwal Rifles Command Portal.",
+      "actor": "Adjutant / CO",
+      "time": "10:09 PM"
+    },
+    {
+      "id": "log-1795192390534-853",
+      "text": "<strong>Adjutant / CO</strong> (Col. R.S. Rawat (CO) / Maj. V.S. Bhandari (Adjutant)) signed into 19 Garhwal Rifles Command Portal.",
+      "actor": "Adjutant / CO",
+      "time": "10:03 PM"
+    },
+    {
+      "id": "log-1795191360623-407",
+      "text": "<strong>Adjutant / CO</strong> (Col. R.S. Rawat (CO) / Maj. V.S. Bhandari (Adjutant)) signed into 19 Garhwal Rifles Command Portal.",
+      "actor": "Adjutant / CO",
+      "time": "09:46 PM"
+    },
+    {
+      "id": "log-1795190652360-190",
+      "text": "<strong>Company Clerk</strong> (Hav. (Clk) S.S. Panwar — Company Office Clerk) signed into 19 Garhwal Rifles Command Portal.",
+      "actor": "Company Clerk",
+      "time": "09:34 PM"
+    },
+    {
+      "id": "log-1795190585074-15",
+      "text": "<strong>SA / IT Cell</strong> (Sub. (IT) D.S. Negi — Signal & IT Cell) signed into 19 Garhwal Rifles Command Portal.",
+      "actor": "SA / IT Cell",
+      "time": "09:33 PM"
+    },
+    {
+      "id": "log-1795190472378-548",
+      "text": "<strong>Adjutant / CO</strong> (Col. R.S. Rawat (CO) / Maj. V.S. Bhandari (Adjutant)) signed into 19 Garhwal Rifles Command Portal.",
+      "actor": "Adjutant / CO",
+      "time": "09:31 PM"
+    },
+    {
+      "id": "log-1",
+      "text": "<strong>THE GARHWAL RIFLES PARADE STATE</strong> compiled across A, B, C, D, SP &amp; HQ COY (807 Posted, 184 Present on HQ Parade, 159 LVE, 464 Out Emp).",
+      "actor": "SA / IT Cell",
+      "time": "06:30 AM"
+    },
+    {
+      "id": "log-2",
+      "text": "<strong>3 Pending Leave Requests</strong> queued for <strong>Adjutant / CO</strong> approval (Rfn. Ankit Singh Negi, Nk. Vikram Singh Rawat, Nb. Sub. K.S. Bartwal).",
+      "actor": "Company Clerk",
+      "time": "09:10 AM"
+    },
+    {
+      "id": "log-3",
+      "text": "<strong>QRF -2 (C) COY</strong> &amp; <strong>QRF -1 (D) COY</strong> tactical deployment verified (146 and 117 personnel deployed).",
+      "actor": "Adjutant / CO",
+      "time": "06:24 AM"
+    },
+    {
+      "id": "log-4",
+      "text": "<strong>AI Readiness Engine</strong> flagged Bravo Company (B COY) leave quota at 27.88% — cautious approval recommended.",
+      "actor": "Garhwal Tactical AI",
+      "time": "06:15 AM"
+    }
+  ],
+  "paradeSignInfo": {
+    "signed": false,
+    "signedBy": null,
+    "signedAt": null,
+    "remarks": "Awaiting Adjutant / CO Daily Countersignature"
+  }
+}

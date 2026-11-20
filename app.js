@@ -331,7 +331,7 @@
     },
     {
       id: 'mov-4',
-      rankName: 'Rfn. Rohit Gariyal',
+      rankName: 'Rfn. Ankit Singh Negi',
       serviceNo: 'GR-435812',
       unitId: 'unit-1',
       unitName: 'A COY',
