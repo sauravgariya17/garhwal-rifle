@@ -227,7 +227,7 @@ export default function LoginView({ onLoginSuccess, showToast }) {
   const handleRequestOtp = async () => {
     setForgotError('');
     try {
-      const res = await api.forgotPassword({ username: forgotUser });
+      const res = await api.forgotPassword({ username: forgotUser, selectedCoy });
       setSignalOtp(res.demoOtp || '');
       setForgotMsg(res.message);
       setForgotStep(2);
@@ -242,6 +242,7 @@ export default function LoginView({ onLoginSuccess, showToast }) {
     try {
       const res = await api.resetPassword({
         username: forgotUser,
+        selectedCoy,
         otp: otpInput,
         securityAnswer: secAnswer,
         newPassword: newPasswordInput

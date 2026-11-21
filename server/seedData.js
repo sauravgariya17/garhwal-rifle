@@ -427,7 +427,7 @@ export const INITIAL_COMPANIES = [
   }
 ];
 
-// 3 Distinct Module Users with Separate Passwords (Stored safely; never shown on Login UI)
+// Separate company clerk credentials; each clerk is assigned to one company desk.
 export const INITIAL_USERS = [
   {
     id: 'user-adjutant',
@@ -482,31 +482,17 @@ export const INITIAL_USERS = [
     }
   },
   {
-    id: 'user-clerk',
-    username: 'coy_clerk',
-    password: 'Clerk@Coy19',
-    role: 'COMPANY_CLERK',
-    displayName: 'Company Clerk',
-    rankTitle: 'Hav. (Clk) S.S. Panwar — Company Office Clerk',
-    unitTitle: 'Alpha Company (A COY) — Garhwal Rifles',
-    accessLabel: 'Company Clerk Desk (Restricted Access)',
-    assignedCoy: 'A',
-    securityQuestion: 'What is the Raising Year of The Garhwal Rifles at Lansdowne?',
-    securityAnswer: '1887',
-    failedAttempts: 0,
-    lockUntil: null,
-    resetOtp: null,
-    permissions: {
-      canViewAllCompanies: false,
-      canApproveLeave: false,
-      canEditParadeSheet: false,
-      canManageCompanies: false,
-      canSignParadeState: false,
-      canManageAutomations: false,
-      canManageSecurity: false,
-      canApplyLeave: true
-    }
-  }
+    id: 'user-clerk-A', username: 'coy_clerk_a', password: 'AClerk@19GR', role: 'COMPANY_CLERK', displayName: 'A COY Clerk', rankTitle: 'Company Office Clerk', unitTitle: 'A COY — 19 Garhwal Rifles', accessLabel: 'Company Clerk Desk (Restricted Access)', assignedCoy: 'A', securityQuestion: 'What is the Raising Year of The Garhwal Rifles at Lansdowne?', securityAnswer: '1887', failedAttempts: 0, lockUntil: null, resetOtp: null, permissions: { canViewAllCompanies: false, canApproveLeave: false, canEditParadeSheet: false, canManageCompanies: false, canSignParadeState: false, canManageAutomations: false, canManageSecurity: false, canApplyLeave: true }
+  },
+  ...['B', 'C', 'D', 'SP', 'HQ'].map((coy) => ({
+    id: `user-clerk-${coy}`, username: `coy_clerk_${coy.toLowerCase()}`,
+    password: { B: 'BClerk@19GR', C: 'CClerk@19GR', D: 'DClerk@19GR', SP: 'SPClerk@19GR', HQ: 'HQClerk@19GR' }[coy],
+    role: 'COMPANY_CLERK', displayName: `${coy} COY Clerk`, rankTitle: 'Company Office Clerk',
+    unitTitle: `${COY_LABELS[coy]} — 19 Garhwal Rifles`, accessLabel: 'Company Clerk Desk (Restricted Access)', assignedCoy: coy,
+    securityQuestion: 'What is the Raising Year of The Garhwal Rifles at Lansdowne?', securityAnswer: '1887',
+    failedAttempts: 0, lockUntil: null, resetOtp: null,
+    permissions: { canViewAllCompanies: false, canApproveLeave: false, canEditParadeSheet: false, canManageCompanies: false, canSignParadeState: false, canManageAutomations: false, canManageSecurity: false, canApplyLeave: true }
+  }))
 ];
 
 export const INITIAL_LEAVES = [

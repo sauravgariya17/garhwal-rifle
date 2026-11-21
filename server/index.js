@@ -58,6 +58,9 @@ function loadDb() {
       const parsed = JSON.parse(raw);
       if (parsed && parsed.users && parsed.companies && parsed.paradeSheet && parsed.leaves) {
         db = { ...createDefaultDb(), ...parsed };
+        const clerkUsers = INITIAL_USERS.filter((u) => u.role === 'COMPANY_CLERK');
+        db.users = [...db.users.filter((u) => u.role !== 'COMPANY_CLERK'), ...clerkUsers.map((u) => ({ ...u }))];
+        saveDb();
         return;
       }
     }
@@ -124,7 +127,7 @@ function addNotification({ targetRole, type, leaveId = null, title, message }) {
   }
 }
 
-function findUserByIdentifier(identifier) {
+function findUserByIdentifier(identifier, selectedCoy) {
   const clean = String(identifier || '').trim().toLowerCase();
   if (['adjutant', 'adjutant_co', 'co', 'admin', 'adjutant / co'].includes(clean)) {
     return db.users.find((u) => u.role === 'ADJUTANT_CO');
@@ -133,7 +136,7 @@ function findUserByIdentifier(identifier) {
     return db.users.find((u) => u.role === 'SA_IT_CELL');
   }
   if (['coy_clerk', 'clerk', 'company_clerk', 'company clerk'].includes(clean)) {
-    return db.users.find((u) => u.role === 'COMPANY_CLERK');
+    return db.users.find((u) => u.role === 'COMPANY_CLERK' && (!selectedCoy || u.assignedCoy === selectedCoy));
   }
   return db.users.find((u) => u.username.toLowerCase() === clean);
 }
@@ -289,7 +292,9 @@ app.get('/api/auth/roles', (req, res) => {
 
 app.post('/api/auth/login', (req, res) => {
   const { username, password, selectedCoy } = req.body;
-  const user = findUserByIdentifier(username);
+  const clerkAlias = ['coy_clerk', 'clerk', 'company_clerk', 'company clerk'].includes(String(username || '').trim().toLowerCase()) || /^coy_clerk_/i.test(String(username || '').trim());
+  if (clerkAlias && !COY_KEYS.includes(selectedCoy)) return res.status(400).json({ error: 'Select a valid company desk to sign in.' });
+  const user = findUserByIdentifier(username, selectedCoy);
 
   if (!user) {
     return res.status(404).json({
@@ -370,8 +375,8 @@ app.post('/api/auth/login', (req, res) => {
 });
 
 app.post('/api/auth/forgot-password', (req, res) => {
-  const { username } = req.body;
-  const user = findUserByIdentifier(username);
+  const { username, selectedCoy } = req.body;
+  const user = findUserByIdentifier(username, selectedCoy);
   if (!user) {
     return res.status(404).json({ error: 'Account not found for password recovery.' });
   }
@@ -391,8 +396,8 @@ app.post('/api/auth/forgot-password', (req, res) => {
 });
 
 app.post('/api/auth/reset-password', (req, res) => {
-  const { username, otp, securityAnswer, newPassword } = req.body;
-  const user = findUserByIdentifier(username);
+  const { username, selectedCoy, otp, securityAnswer, newPassword } = req.body;
+  const user = findUserByIdentifier(username, selectedCoy);
   if (!user) {
     return res.status(404).json({ error: 'Account not found.' });
   }

@@ -96,17 +96,6 @@ export default function App() {
     setNotifOpen(false);
   };
 
-  const handleClerkCoyChange = (newCoyKey) => {
-    if (!user) return;
-    const updated = {
-      ...user,
-      assignedCoy: newCoyKey,
-      unitTitle: `${COY_LABELS[newCoyKey]} — The Garhwal Rifles`
-    };
-    saveUserSession(updated);
-    showToast(`Switched Company Clerk Desk to ${COY_LABELS[newCoyKey]}`);
-  };
-
   const handleOpenCompanyPage = (company) => {
     if (!company) return;
     setSelectedCompanyId(company.id);
@@ -399,20 +388,7 @@ export default function App() {
 
         {/* Right Controls + Signature Phenomenon White Rectangular-Rounded CTA */}
         <div className="ps-nav-right">
-          {isClerk && (
-            <select
-              className="ps-dark-select"
-              value={user.assignedCoy}
-              onChange={(e) => handleClerkCoyChange(e.target.value)}
-              title="Switch Assigned Company Desk"
-            >
-              {COY_KEYS.map((k) => (
-                <option key={k} value={k}>
-                  {COY_LABELS[k]} DESK
-                </option>
-              ))}
-            </select>
-          )}
+          {isClerk && <span className="ps-dark-select">{COY_LABELS[user.assignedCoy]} DESK</span>}
 
           {/* Notification Bell */}
           <div className="notif-wrapper">

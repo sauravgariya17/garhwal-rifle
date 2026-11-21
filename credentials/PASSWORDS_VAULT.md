@@ -22,9 +22,18 @@
 
 ## 3. Company Clerk Module
 - **Role Name:** `Company Clerk`
-- **Username:** `coy_clerk`
-- **Password:** `Clerk@Coy19`
-- **Access Level:** Company-Level Office Desk (`A COY`, `B COY`, `C COY`, `D COY`, `SP COY`, `HQ COY`). Applies for Soldier Leave with Mandatory Reason & Calendar Dates (dispatched to Adjutant / CO for approval). Restricted from editing Battalion Parade Sheet or approving leaves.
+- **Access Level:** Each login is fixed to one company desk. Select that company on the login screen; the same clerk account cannot switch desks after login.
+
+| Company desk | Username | Password |
+| --- | --- | --- |
+| A COY | `coy_clerk_a` | `AClerk@19GR` |
+| B COY | `coy_clerk_b` | `BClerk@19GR` |
+| C COY | `coy_clerk_c` | `CClerk@19GR` |
+| D COY | `coy_clerk_d` | `DClerk@19GR` |
+| SP COY | `coy_clerk_sp` | `SPClerk@19GR` |
+| HQ COY | `coy_clerk_hq` | `HQClerk@19GR` |
+
+Clerks can view and file leave applications only for their assigned company. They cannot edit the Battalion Parade Sheet or approve leaves.
 
 ---
 
